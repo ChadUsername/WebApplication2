@@ -11,7 +11,19 @@ namespace Project.Controllers
         public RateResponse Get(string source, string target, string amount)
         {
             AsiaYoPreTestProductModel model = new AsiaYoPreTestProductModel();
-            var reponse = model.ExchangeRate(source, target, amount);
+            RateResponse reponse = new RateResponse();
+
+            if (!string.IsNullOrEmpty(source) &&
+                !string.IsNullOrEmpty(source) &&
+                !string.IsNullOrEmpty(amount))
+            {
+                reponse = model.ExchangeRate(source, target, amount);
+            }
+            else
+            {
+                reponse.msg = "傳入參數請勿空值";
+            }
+
             return reponse;
         }
     }
