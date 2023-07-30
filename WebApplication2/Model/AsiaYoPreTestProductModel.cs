@@ -42,7 +42,7 @@ namespace Project.Model
 
                     if (rate != 0)
                     {
-                        var convertedAmount = FormatNumberWithCommas(number * rate);
+                        var convertedAmount = string.Format("{0:N}", Math.Round((number * rate), 2));
                         result.amount = GetCurrencySymbol(target) + convertedAmount;
                         result.msg = "成功";
                     }
@@ -148,14 +148,6 @@ namespace Project.Model
             }
 
             return currencySymbol;
-        }
-        #endregion
-
-        #region 取得貨幣符號
-        public static string FormatNumberWithCommas(decimal number)
-        {
-            string formattedNumber = string.Format("{0:N}", number);
-            return formattedNumber;
         }
         #endregion
     }
