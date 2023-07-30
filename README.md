@@ -17,7 +17,7 @@
 
 ### 下載專案
 
-git clone https://github.com/yourusername/AsiaYoPreTestProduct.git
+git clone https://github.com/ChadUsername/WebApplication2.git
 
 ### 執行專案
 
