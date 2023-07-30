@@ -22,9 +22,9 @@ namespace Project.Model
         /// <summary>
         /// 匯率轉換
         /// </summary>
-        /// <param name="source"></param>
-        /// <param name="target"></param>
-        /// <param name="amount"></param>
+        /// <param name="source">要轉換的原始貨幣代碼 (例如 "TWD")</param>
+        /// <param name="target">目標貨幣代碼 (例如 "USD")</param>
+        /// <param name="amount">要轉換的金額 (例如 "1000")</param>
         /// <returns></returns>
         public RateResponse ExchangeRate(string source, string target, string amount)
         {
@@ -69,8 +69,8 @@ namespace Project.Model
         /// <summary>
         /// 取得匯率
         /// </summary>
-        /// <param name="source"></param>
-        /// <param name="target"></param>
+        /// <param name="source">要轉換的原始貨幣代碼 (例如 "TWD")</param>
+        /// <param name="target">目標貨幣代碼 (例如 "USD")</param>
         /// <returns></returns>
         public static decimal GetRate(string source, string target)
         {
@@ -125,7 +125,7 @@ namespace Project.Model
         /// <summary>
         /// 取得貨幣符號
         /// </summary>
-        /// <param name="curr"></param>
+        /// <param name="curr">貨幣代碼(例如 "TWD")</param>
         /// <returns></returns>
         public static string GetCurrencySymbol(string curr)
         {
