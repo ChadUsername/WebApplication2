@@ -81,6 +81,18 @@ namespace Project.Tests
             // 斷言 (Assert)
             Assert.IsNotNull(response);
             Assert.AreEqual("成功", response.msg);
+
+            // 安排 (Arrange)
+            //這是一個錯誤的貨幣符號，但兩者相同
+            source = "XSEFEGRG";
+            target = "XSEFEGRG";
+
+            // 行動 (Act)
+            response = controller.Get(source, target, amount);
+
+            // 斷言 (Assert)
+            Assert.IsNotNull(response);
+            Assert.AreEqual("成功", response.msg);
         }
 
         [TestMethod]
@@ -149,6 +161,7 @@ namespace Project.Tests
 
             // 安排 (Arrange)
             source = "XYZ";
+            target = "TWD";
 
             // 行動 (Act)
             response = controller.Get(source, target, amount);
